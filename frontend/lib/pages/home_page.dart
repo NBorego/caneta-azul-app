@@ -6,14 +6,22 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Icon(Icons.menu)),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        child: Icon(Icons.add),
+      appBar: AppBar(
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            IconButton(onPressed: () {}, icon: const Icon(Icons.menu)),
+            SizedBox(
+              height: 40,
+              width: 40,
+              child: CircleAvatar(
+                backgroundImage: AssetImage('assets/images/avatar.jpg'),
+              ),
+            ),
+          ],
+        ),
       ),
-      body: Column(
-        children: [Text('Home Page'), Text('Home Page'), Text('Home Page')],
-      ),
+      body: Column(children: [Text('Home Page'), Text('Home Page')]),
     );
   }
 }
