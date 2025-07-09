@@ -15,6 +15,21 @@ class AppThemes {
       foregroundColor: Colors.white,
       iconSize: 40,
     ),
+    inputDecorationTheme: InputDecorationTheme(
+      fillColor: AppColors.input,
+      filled: true,
+      labelStyle: TextStyle(color: AppColors.textLight2),
+      floatingLabelBehavior: FloatingLabelBehavior.never,
+      iconColor: AppColors.textLight1,
+      enabledBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(20),
+        borderSide: BorderSide.none,
+      ),
+      focusedBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(20),
+        borderSide: BorderSide(color: AppColors.primaryColor, width: 2),
+      ),
+    ),
   );
 
   static final ThemeData darkTheme = ThemeData(brightness: Brightness.dark);

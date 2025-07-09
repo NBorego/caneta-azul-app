@@ -21,7 +21,22 @@ class HomePage extends StatelessWidget {
           ],
         ),
       ),
-      body: Column(children: [Text('Home Page'), Text('Home Page')]),
+      body: Column(
+        children: [Text('Home Page'), Text('Home Page'), TextField()],
+      ),
+      floatingActionButton: Row(
+        children: [
+          Expanded(
+            child: Padding(
+              padding: const EdgeInsets.only(left: 35, right: 20),
+              child: TextField(
+                decoration: InputDecoration(labelText: 'Criar tarefa'),
+              ),
+            ),
+          ),
+          FloatingActionButton(onPressed: () {}, child: Icon(Icons.add)),
+        ],
+      ),
     );
   }
 }
