@@ -38,6 +38,11 @@ class LoginPage extends StatelessWidget {
                 ),
               ],
             ),
+            SizedBox(height: 20),
+            Text(
+              'Esqueceu a senha?',
+              style: TextStyle(decoration: TextDecoration.underline),
+            ),
           ],
         ),
       ),

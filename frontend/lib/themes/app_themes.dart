@@ -12,6 +12,7 @@ class AppThemes {
       iconTheme: IconThemeData(color: AppColors.textLight1, size: 40),
     ),
     fontFamily: GoogleFonts.inter().fontFamily,
+    textTheme: TextTheme(bodyMedium: TextStyle(color: AppColors.textLight2)),
     floatingActionButtonTheme: FloatingActionButtonThemeData(
       backgroundColor: AppColors.primaryColor,
       foregroundColor: Colors.white,
