@@ -12,8 +12,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Caneta Azul',
-      theme: AppThemes.lightTheme,
+      theme: AppThemes.darkTheme,
       darkTheme: AppThemes.darkTheme,
       home: LoginPage(),
     );
