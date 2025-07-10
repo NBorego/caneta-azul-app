@@ -9,41 +9,56 @@ class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 14.0),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Align(
-              alignment: Alignment.centerLeft,
-              child: Text(
-                'Bem-vindo,\nao Caneta Azul 🖊️',
-                style: GoogleFonts.robotoCondensed(
-                  fontSize: 35,
-                  color: Theme.of(context).primaryColor,
-                ),
-              ),
+      body: SingleChildScrollView(
+        child: SizedBox(
+          width: MediaQuery.of(context).size.width,
+          height: MediaQuery.of(context).size.height,
+          child: Padding(
+            padding: const EdgeInsets.symmetric(
+              horizontal: 20.0,
+              vertical: 14.0,
             ),
-            SizedBox(height: 45),
-            AppInput(text: 'E-mail', textInputType: TextInputType.emailAddress),
-            AppInput(text: 'Password', obscureText: true),
-            Row(
+            child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Expanded(child: AppButton(text: 'Entrar')),
-                SizedBox(width: 20),
-                Expanded(
-                  child: AppButton(text: 'Cadastrar-se', outlineButton: true),
+                Align(
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    'Bem-vindo,\nao Caneta Azul 🖊️',
+                    style: GoogleFonts.robotoCondensed(
+                      fontSize: 35,
+                      color: Theme.of(context).primaryColor,
+                    ),
+                  ),
+                ),
+                SizedBox(height: 45),
+                AppInput(
+                  text: 'E-mail',
+                  textInputType: TextInputType.emailAddress,
+                ),
+                AppInput(text: 'Password', obscureText: true),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Expanded(child: AppButton(text: 'Entrar')),
+                    SizedBox(width: 20),
+                    Expanded(
+                      child: AppButton(
+                        text: 'Cadastrar-se',
+                        outlineButton: true,
+                      ),
+                    ),
+                  ],
+                ),
+                SizedBox(height: 20),
+                Text(
+                  'Esqueceu a senha?',
+                  style: TextStyle(decoration: TextDecoration.underline),
                 ),
               ],
             ),
-            SizedBox(height: 20),
-            Text(
-              'Esqueceu a senha?',
-              style: TextStyle(decoration: TextDecoration.underline),
-            ),
-          ],
+          ),
         ),
       ),
     );
