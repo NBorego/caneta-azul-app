@@ -32,6 +32,12 @@ class AppThemes {
         borderSide: BorderSide(color: AppColors.primaryColor, width: 2),
       ),
     ),
+    elevatedButtonTheme: ElevatedButtonThemeData(
+      style: ElevatedButton.styleFrom(
+        padding: EdgeInsets.all(8.0),
+        textStyle: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
+      ),
+    ),
   );
 
   static final ThemeData darkTheme = ThemeData(brightness: Brightness.dark);

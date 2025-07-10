@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:frontend/themes/app_colors.dart';
+import 'package:frontend/widgets/app_button.dart';
 import 'package:frontend/widgets/app_input.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -21,7 +21,7 @@ class LoginPage extends StatelessWidget {
                 'Bem-vindo,\nao Caneta Azul 🖊️',
                 style: GoogleFonts.robotoCondensed(
                   fontSize: 35,
-                  color: AppColors.primaryColor,
+                  color: Theme.of(context).primaryColor,
                 ),
               ),
             ),
@@ -31,9 +31,11 @@ class LoginPage extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                ElevatedButton(onPressed: () {}, child: Text('Entrar')),
+                Expanded(child: AppButton(text: 'Entrar')),
                 SizedBox(width: 20),
-                ElevatedButton(onPressed: () {}, child: Text('Cadastrar-se')),
+                Expanded(
+                  child: AppButton(text: 'Cadastrar-se', outlineButton: true),
+                ),
               ],
             ),
           ],
