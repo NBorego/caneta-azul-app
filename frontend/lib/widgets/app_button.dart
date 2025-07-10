@@ -14,7 +14,7 @@ class AppButton extends StatelessWidget {
             ? Theme.of(context).primaryColor
             : Theme.of(context).scaffoldBackgroundColor,
         foregroundColor: !outlineButton
-            ? Colors.white
+            ? Theme.of(context).scaffoldBackgroundColor
             : Theme.of(context).primaryColor,
         padding: EdgeInsets.all(16.0),
         shadowColor: Colors.transparent,
