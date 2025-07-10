@@ -15,26 +15,11 @@ class AppInput extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 14.0),
+      padding: const EdgeInsets.symmetric(vertical: 14.0),
       child: TextField(
         obscureText: obscureText,
         keyboardType: TextInputType.text,
-        decoration: InputDecoration(
-          labelText: text,
-          labelStyle: TextStyle(color: Colors.black),
-          filled: true,
-          fillColor: Colors.grey,
-          floatingLabelBehavior: FloatingLabelBehavior.never,
-          focusedBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(20),
-            borderSide: BorderSide(color: Colors.blue, width: 2),
-          ),
-          enabledBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(20),
-
-            borderSide: BorderSide(color: Colors.transparent, width: 0),
-          ),
-        ),
+        decoration: InputDecoration(labelText: text),
       ),
     );
   }

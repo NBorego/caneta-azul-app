@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:frontend/pages/home_page.dart';
+import 'package:frontend/pages/login_page.dart';
 import 'package:frontend/themes/app_themes.dart';
 
 void main() {
@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       title: 'Caneta Azul',
       theme: AppThemes.lightTheme,
       darkTheme: AppThemes.darkTheme,
-      home: HomePage(),
+      home: LoginPage(),
     );
   }
 }

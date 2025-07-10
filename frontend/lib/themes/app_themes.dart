@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:frontend/themes/app_colors.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class AppThemes {
   static final ThemeData lightTheme = ThemeData(
@@ -10,6 +11,7 @@ class AppThemes {
       backgroundColor: AppColors.background,
       iconTheme: IconThemeData(color: AppColors.textLight1, size: 40),
     ),
+    fontFamily: GoogleFonts.inter().fontFamily,
     floatingActionButtonTheme: FloatingActionButtonThemeData(
       backgroundColor: AppColors.primaryColor,
       foregroundColor: Colors.white,
