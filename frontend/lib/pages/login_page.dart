@@ -38,6 +38,7 @@ class LoginPage extends StatelessWidget {
                   textInputType: TextInputType.emailAddress,
                 ),
                 AppInput(text: 'Password', obscureText: true),
+                SizedBox(height: 14),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
